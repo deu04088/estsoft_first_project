@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./stylesheet.css">
+    <script src="function.js"></script>
 </head>
 <body>
-    <div class="drawable" id="drawableMenu">
-        <span class="drawable_close">
-            <a href="javascript:void(0)" class="closeIcon" onclick="closeDrawableMenu()">&times;</a>
-        </span>
-        <a href="#home" onclick="closeNav()" id="home-link">홈</a>
-        <a href="#about" onclick="closeNav()" id="about-link">Shorts</a>
-        <a href="#works" onclick="closeNav()" id="works-link">구독</a>
-        <a href="#contact" onclick="closeNav()" id="contact-link">Contact Me</a>
-    </div>
-    <div class="backdrop" id="backdropMenu"></div>
-    <nav class="navmenu">
-        <span onclick="openDrawableMenu()" class="openIcon">&#9776;</span>
-    </nav>
     <nav class="navbar" id="navbar">
-
-        <a href="#">
+        <div class="drawable" id="drawableMenu">
+        <span class="drawable_close">
+            <span class="drawable_close" style="display: none;"></span>
+<!--            <a href="javascript:void(0)" class="closeIcon" onclick="closeDrawableMenu()">&times;</a>-->
+        </span>
+            <a href="#" onclick="closeDrawableMenu()" id="home-link">홈</a>
+            <a href="#" onclick="closeDrawableMenu()" id="shorts-link">Shorts</a>
+            <a href="#" onclick="closeDrawableMenu()" id="subscribe-link">구독</a>
+        </div>
+        <div class="backdrop" id="backdropMenu"></div>
+        <nav class="navmenu" id="navmenu">
+            <span onclick="openDrawableMenu()" class="openIcon">&#9776;</span>
+            <span onclick="closeDrawableMenu()" class="closeIcon" id="menuCloseIcon" style="display: none;">&times;</span>
+        </nav>
+        <a href="http://localhost:63342/estsoft_first_project/main_page.html?_ijt=pfhet1t7mlpoq57ok22dqi2g0r&_ij_reload=RELOAD_ON_SAVE#">
             <img class="logo" src="youtube_logo.png" alt="유튜브로고">
         </a>
     </nav>
