@@ -3,8 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="./stylesheet.css">
 </head>
 <body>
+    <div class="drawable" id="drawableMenu">
+        <span class="drawable_close">
+            <a href="javascript:void(0)" class="closeIcon" onclick="closeDrawableMenu()">&times;</a>
+        </span>
+        <a href="#home" onclick="closeNav()" id="home-link">홈</a>
+        <a href="#about" onclick="closeNav()" id="about-link">Shorts</a>
+        <a href="#works" onclick="closeNav()" id="works-link">구독</a>
+        <a href="#contact" onclick="closeNav()" id="contact-link">Contact Me</a>
+    </div>
+    <div class="backdrop" id="backdropMenu"></div>
+    <nav class="navmenu">
+        <span onclick="openDrawableMenu()" class="openIcon">&#9776;</span>
+    </nav>
+    <nav class="navbar" id="navbar">
 
+        <a href="#">
+            <img class="logo" src="youtube_logo.png" alt="유튜브로고">
+        </a>
+    </nav>
 </body>
 </html>

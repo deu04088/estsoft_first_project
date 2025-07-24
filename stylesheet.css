@@ -1,0 +1,80 @@
+#navbar {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-animation: fadeIn 1.2s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.navmenu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.openIcon {
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    color: black;
+    margin-left: 3rem;
+}
+.drawableMenu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.drawableMenu a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+.drawableMenu a:hover {
+    color: #f1f1f1;
+}
+.drawableMenu .closeIcon {
+    font-size: 3rem;
+    font-weight: 700;
+    color:#C9002B ;
+    padding-right: 1rem;
+}
+.drawableMenu .drawable_close{
+    height: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    width: 200px;
+}
