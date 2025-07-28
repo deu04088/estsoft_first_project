@@ -7,24 +7,44 @@
     <script src="function.js"></script>
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="drawable" id="drawableMenu">
-        <span class="drawable_close">
-            <span class="drawable_close" style="display: none;"></span>
-<!--            <a href="javascript:void(0)" class="closeIcon" onclick="closeDrawableMenu()">&times;</a>-->
-        </span>
-            <a href="#" onclick="closeDrawableMenu()" id="home-link">홈</a>
-            <a href="#" onclick="closeDrawableMenu()" id="shorts-link">Shorts</a>
-            <a href="#" onclick="closeDrawableMenu()" id="subscribe-link">구독</a>
+    <nav class="navbar">
+        <div class="sidebar_icon">
+            <a href="#">
+                <img src=./icon/bars-solid-full.svg alt="사이드바">
+            </a>
         </div>
-        <div class="backdrop" id="backdropMenu"></div>
-        <nav class="navmenu" id="navmenu">
-            <span onclick="openDrawableMenu()" class="openIcon">&#9776;</span>
-            <span onclick="closeDrawableMenu()" class="closeIcon" id="menuCloseIcon" style="display: none;">&times;</span>
-        </nav>
-        <a href="http://localhost:63342/estsoft_first_project/main_page.html?_ijt=pfhet1t7mlpoq57ok22dqi2g0r&_ij_reload=RELOAD_ON_SAVE#">
-            <img class="logo" src="youtube_logo.png" alt="유튜브로고">
-        </a>
+        <div class="logo">
+            <a href="http://localhost:63342/estsoft_first_project/main_page.html?_ijt=1iq8tmqn7uuledo95remv76kgi&_ij_reload=RELOAD_ON_SAVE" target="_self">
+                <img src="youtube_logo_1.PNG" alt="유튜브">
+            </a>
+        </div>
+        <div class="search_bar">
+            test
+        </div>
     </nav>
+    <div class="sidebar">
+        <button type="button">
+            <img src="./icon/house-solid-full.svg" alt="홈">
+            홈
+        </button>
+        <button type="button">
+            <img src="./icon/icons8-youtube-반바지-48.png" alt="쇼츠">
+            Shorts
+        </button>
+        <button type="button">
+            <img src="./icon/youtube-brands-solid-full.svg" alt="구독">
+            구독
+        </button>
+        </hr>
+        <button type="button">
+            <img src>
+        </button>
+        <button type="button">
+            <img src>
+        </button>
+
+
+    </div>
+
 </body>
 </html>
