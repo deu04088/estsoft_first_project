@@ -51,7 +51,34 @@
 .search.focus {
     border: 2px solid steelblue;
 }
+.sidebar_mini {
+    align-items: center;
+    position: fixed;
+    padding-top: 10px;
+    top: 50px;
+    left: 0px;
+    height: 100%;
+    width: 80px;
+    background-color: purple;
+    display: flex;              /*내부 정렬*/
+    flex-direction: column;     /*세로 방향*/
+    gap: 15px;
 
+}
+.sidebar_mini button {
+    height: 70px;
+    width: 70px;
+}
+.sidebar_mini img {
+    height: 40px;
+    width: 40px;
+}
+.sidebar_mini p{
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+
+}
 .sidebar {
     position: fixed;
     padding-top: 10px;
@@ -74,7 +101,7 @@
     width: 30px;
     margin-right: 20px;
 }
-button {
+.sidebar button {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -86,7 +113,7 @@ button {
     font-weight: 500;
 }
 
-button img {
+.sidebar button img {
     height: 30px;
     width: auto;
     margin-right: 1rem;
