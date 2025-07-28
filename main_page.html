@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./stylesheet.css">
-    <script src="function.js"></script>
+    <script defer src="function.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="sidebar_icon">
-            <a href="#">
+            <a href="#" id="sidebar_toggle">
                 <img src=./icon/bars-solid-full.svg alt="사이드바">
             </a>
         </div>
@@ -19,7 +19,12 @@
             </a>
         </div>
         <div class="search_bar">
-            test
+            <form class="search" id="search" action="" method="get">
+                <input type="text" name="" value="" placeholder="검색">
+                <button type="submit">
+                    <img src="./icon/magnifying-glass-solid-full.svg" alt="검색">
+                </button>
+            </form>
         </div>
     </nav>
     <div class="sidebar">
@@ -35,13 +40,32 @@
             <img src="./icon/youtube-brands-solid-full.svg" alt="구독">
             구독
         </button>
-        </hr>
-        <button type="button">
-            <img src>
+        <hr>
+        <button type="button" class="category">
+            <span>내 페이지 〉</span>
         </button>
         <button type="button">
-            <img src>
+            <img src="./icon/clock-regular-full.svg" alt="시청 기록">
+            <span>시청 기록</span>
         </button>
+        <button type="button">
+            <img src="./icon/list-solid-full.svg" alt="재생 목록">
+            <span>재생 목록</span>
+        </button>
+        <button type="button">
+            <img src="./icon/youtube-brands-solid-full.svg" alt="내 동영상">
+            <span>내 동영상</span>
+        </button>
+        <button type="button">
+            <img src="./icon/clock-regular-full.svg" alt="나중에 볼 동영상 " >
+            <span>나중에 볼 동영상</span>
+        </button>
+        <button type="button">
+            <img src="./icon/thumbs-up-regular-full.svg" alt="좋아요">
+            <span>좋아요 표시한 동영상</span>
+        </button>
+        <hr>
+
 
     </div>
 

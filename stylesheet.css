@@ -3,49 +3,95 @@
     top: 0;
     left: 0;
     margin: 0px;
-    padding: 0px 1%;
-    height: 50px;
-    background-color: yellow;
-    display: flex;
-    z-index: 1000;
-}
-.sidebar_icon{
-    flex: 0 0 auto;
-    width: 30px;
-    margin-right: 20px;
-}
-i {
+    padding: 0px 20px;
     height: 50px;
     width: 100%;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
 }
 
 .logo img {
-    height: 70%;
+    height: 30px;
     width: auto;
-    display: block;
+    margin-right: 80px;
 }
-
-.search_bar{
-
+.search{
+    /*기본 정렬*/
+    display: flex;
+    align-item: center;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.search input {
+    height: 30px;
+    width: auto;
+    padding: 3px 15px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
+.search button {
+    height: 36px;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 0px;
+    border: none;
+    background-color: light-grey;
+    cursor: pointer;
+    align-item: center;
+    justify-content: center;
+}
+.search button img {
+    height: 25px;
+    width: auto;
+}
+.search.focus {
+    border: 2px solid steelblue;
 }
 
 .sidebar {
     position: fixed;
     padding-top: 10px;
     top: 50px;
-    left: 0;
+    left: -250px;
     height: 100%;
     width: 250px;
     background-color: purple;
+    display: flex;              /*내부 정렬*/
+    flex-direction: column;     /*세로 방향*/
+    gap: 10px;
+    transition: left 0.3s ease;     /*동작 애니메이션*/
 }
-button {
-    font-size: 20px
+.sidebar.open {
+    left: 0;
 }
 
-button img{
+.sidebar_icon{
+    flex: 0 0 auto;
+    width: 30px;
+    margin-right: 20px;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    margin: 0 1rem;
+}
+.category span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button img {
     height: 30px;
     width: auto;
     margin-right: 1rem;
-    justify-content: flex-start;
-
+}
+hr {
+    margin: 10px;
+    border: solid 1px grey;
 }
