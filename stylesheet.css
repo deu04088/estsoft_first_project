@@ -22,9 +22,9 @@
 }
 .search_bar {
     display: flex;
-    width: 60%;
-    justify-content: center;
+    width: 100%;
     align-items: center;
+    justify-content: center;
     gap: 20px;
     padding: 10px;
     flex-wrap: nowrap;
@@ -32,8 +32,9 @@
 .search{
     /*기본 정렬*/
     display: flex;
-    width: 70%;
+    width: 40%;
     align-items: center;
+    justify-content: center;
     border: 1px solid #ccc;
     overflow: hidden;
     border-radius: 20px;
@@ -87,7 +88,7 @@
     cursor: pointer;
 }
 .func_btn {
-    width: 100%;
+    width: 50%%;
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
