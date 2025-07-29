@@ -24,16 +24,16 @@
     display: flex;
     width: 60%;
     justify-content: center;
-    align-items; center;
+    align-items: center;
     gap: 20px;
     padding: 10px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 .search{
     /*기본 정렬*/
     display: flex;
     width: 70%;
-    align-item: center;
+    align-items: center;
     border: 1px solid #ccc;
     overflow: hidden;
     border-radius: 20px;
@@ -55,7 +55,7 @@
     border: none;
     background-color: light-grey;
     cursor: pointer;
-    align-item: center;
+    align-items: center;
     justify-content: center;
 }
 .search button img {
@@ -87,11 +87,17 @@
     cursor: pointer;
 }
 .func_btn {
+    width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
+    padding: 0 10px;
+    margin-right: 20px;
 }
-.upload_video, .alert_btn, .user_info {
+.func_btn button {
+    flex-shrink: 0;
     margin: 0;
     padding: 0;
     border-radius: 20px;
@@ -122,8 +128,8 @@
 }
 .alert_btn img {
     padding-top: 2px;
-    height: 60%;
-    width: 80%;
+    height: 20px;
+    width: 24px;
     object-fit: contain;
 }
 .user_info {
@@ -131,8 +137,8 @@
     width: 36px;
 }
 .user_info img {
-    height: 60%;
-    width: 60%;
+    height: 20px;
+    width: 20px;
     object-fit: contain;
 }
 .upload_video:hover, .alert_btn:hover, .user_info:hover {
@@ -140,13 +146,30 @@
     cursor: pointer;
 }
 
-/*
-@media (max-width: 1400px) {
+@media (max-width: 500px) {
     .search {
-        max-width: 100%;
+        width: 150px;
+    }
+    .search input {
+        min-width: 30px;
+        padding: 4px 6px;
     }
 }
-*/
+
+@media (max-width: 350px) {
+    .search input {
+        width: 0;
+        min-width: 0;
+        padding: 0;
+        opacity: 0;
+        pointer-events: none;
+        border: none;
+    }
+    .search {
+        width: auto; /* 아이콘 버튼 크기만큼 */
+        border: none;
+    }
+}
 
 
 /*==============================sidebar_mini==================================*/
