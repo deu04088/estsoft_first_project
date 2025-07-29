@@ -22,7 +22,7 @@
 }
 .search_bar {
     display: flex;
-    width: 100%;
+    width: 60%;
     justify-content: center;
     align-items; center;
     gap: 20px;
@@ -66,6 +66,80 @@
 .search.focus {
     border: 2px solid steelblue;
 }
+.search_by_sound {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 20px;
+    border: none;
+}
+.search_by_sound img {
+    height: 60%;
+    width: 60%
+    object-fit: contain; /* 이미지 비율 유지*/
+}
+.search_by_sound:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+.func_btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.upload_video, .alert_btn, .user_info {
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+}
+.upload_video {
+    display: flex;
+    height: 32px;
+    width: 100px;
+    gap: 2px;
+}
+.upload_video img {
+    height: 18px;
+    width: 18px;
+    padding-right: 8px;
+    object-fit: contain;
+}
+.upload_video span {
+    padding-bottom: 1px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.alert_btn {
+    height: 36px;
+    width: 36px;
+}
+.alert_btn img {
+    padding-top: 2px;
+    height: 60%;
+    width: 80%;
+    object-fit: contain;
+}
+.user_info {
+    height: 36px;
+    width: 36px;
+}
+.user_info img {
+    height: 60%;
+    width: 60%;
+    object-fit: contain;
+}
+.upload_video:hover, .alert_btn:hover, .user_info:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
 /*
 @media (max-width: 1400px) {
     .search {
@@ -92,6 +166,8 @@
 .sidebar_mini button {
     height: 70px;
     width: 70px;
+    border-radius: 5px;
+    border: none;
 }
 .sidebar_mini img {
     height: 40px;
@@ -101,6 +177,10 @@
     margin: 0px;
     padding: 0px;
     font-size: 12px;
+}
+.sidebar_mini button:hover {
+    background-color: #dddddd;
+    cursor: pointer;
 }
 
 
