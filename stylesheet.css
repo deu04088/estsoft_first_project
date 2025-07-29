@@ -20,6 +20,7 @@
     width: auto;
     margin-right: 80px;
 }
+/*======================================search bar======================================*/
 .search_bar {
     display: flex;
     width: 100%;
@@ -87,6 +88,7 @@
     background-color: #dddddd;
     cursor: pointer;
 }
+/*==================================function button====================================*/
 .func_btn {
     width: 50%%;
     display: flex;
@@ -182,7 +184,6 @@
     left: 0px;
     height: 100%;
     width: 80px;
-    background-color: purple;
     display: flex;              /*내부 정렬*/
     flex-direction: column;     /*세로 방향*/
     gap: 15px;
@@ -190,6 +191,7 @@
 .sidebar_mini button {
     height: 70px;
     width: 70px;
+    background-color: white;
     border-radius: 5px;
     border: none;
 }
@@ -209,6 +211,17 @@
 
 
 /*==============================sidebar==================================*/
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
+    display: none;
+}
+
 .sidebar {
     position: fixed;
     padding-top: 10px;
@@ -216,14 +229,18 @@
     left: -250px;
     height: 100%;
     width: 250px;
-    background-color: purple;
+    background-color: white;
     display: flex;              /*내부 정렬*/
     flex-direction: column;     /*세로 방향*/
     gap: 10px;
+    z-index: 10;
     transition: left 0.3s ease;     /*동작 애니메이션*/
 }
 .sidebar.open {
     left: 0;
+}
+.backdrop.open {
+    display: block;
 }
 .sidebar_icon{
     flex: 0 0 auto;
@@ -234,10 +251,22 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
     font-size: 16px;
     margin: 0 1rem;
 }
+.sidebar button:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
 .category span {
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidebar p {
+    margin: 0px 20px;
     font-size: 20px;
     font-weight: 500;
 }
@@ -246,7 +275,24 @@
     width: auto;
     margin-right: 1rem;
 }
+img.broadcasting{
+    padding-left: 45px;
+    height: px;
+    width: 5px;
+
+}
 hr {
     margin: 10px;
     border: solid 1px grey;
+}
+
+
+
+
+
+
+
+
+.sidebar_mini {
+    background-color: purple;
 }
