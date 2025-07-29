@@ -187,6 +187,7 @@
     display: flex;              /*내부 정렬*/
     flex-direction: column;     /*세로 방향*/
     gap: 15px;
+    z-index: 1001;
 }
 .sidebar_mini button {
     height: 70px;
@@ -211,7 +212,7 @@
 
 
 /*==============================sidebar==================================*/
-.backdrop {
+.side_backdrop {
     position: fixed;
     top: 0;
     left: 0;
@@ -239,7 +240,7 @@
 .sidebar.open {
     left: 0;
 }
-.backdrop.open {
+.side_backdrop.open {
     display: block;
 }
 .sidebar_icon{
@@ -281,18 +282,95 @@ img.broadcasting{
     width: 5px;
 
 }
-hr {
+.sidebar hr {
     margin: 10px;
     border: solid 1px grey;
+}
+
+/*==========================user option============================*/
+.user_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 9;
+    display: none;
+}
+
+.user_backdrop.open {
+    display: block;
+}
+
+.user_option {
+    position: absolute;
+    top: 44px;
+    right: 10px;
+    width: 280px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 15px;
+}
+.information {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 12px;
+}
+.information img {
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+}
+.info_text {
+    display: flex;
+    font-size: 16px;
+    font-weight: 500;
+    flex-direction: column;
+}
+.information a {
+    margin-top: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: blue;
+}
+
+.user_option ul {
+    margin: 5px 0;
+    padding: 0;
+}
+.user_option li {
+    list-style: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.user_option.open{
+    display: flex;
+}
+.user_option hr {
+    margin: 0;
+    padding: 0;
+    border: solid 1px grey;
+}
+
+.user_option li:hover {
+    background-color: #dddddd;
+    cursor: pointer;
 }
 
 
 
 
-
-
-
-
+/*=======================영역 확인용===============================*/
 .sidebar_mini {
     background-color: purple;
 }
