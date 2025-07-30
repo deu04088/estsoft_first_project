@@ -417,21 +417,127 @@ img.broadcasting{
 }
 
 /*============================video page====================================*/
-./main_contents {
-    margin-top: 80px;
+.container {
+    position: relative;
+    margin: 0 40px;
+    top: 50px;
+    display: grid;
+    /*grid-template-columns: 1fr 500px;*/
+    grid-template-columns: 1fr minmax(250px, 500px);
+
 }
-.main_contents img {
+.main_contents {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 100%;
+    align-items: flex-start;
+    justify-content: center;
+    /*margin-top: 80px;*/
+}
+.main_video {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    max-width: 1600px;
+    min-width: 720px;
+}
+.main_video_info_wrap {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+.main_video img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.main_video_title {
+    margin: 10px;
+}
+.main_video_info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.main_video_info img {
     height: 40px;
-    width: auto;
+    width: 40px;
     border-radius: 20px;
     background-color: #dddd;
     object-fit: cover;
 }
+.main_video_channel {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
+.main_video_channel span {
+    font-size: 12px;
+}
+.join, .subscribe {
+    height: 32px;
+    width: 60px;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+}
+.main_video_info_wrap .func_btn {
+    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+.main_video_info_wrap .func_btn button {
+    height: 32px;
+    width: auto;
+    padding: 0 10px;
+}
+.video_detail {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #dddddd;
+    border-radius: 10px;
+}
+.video_detail span {
+    font-size: 14px;
+    font-weight: bold;
+}
+.comments_wrap {
+    display: flex;
+    gap: 30px;
+}
+
+/*===========================recommended video=================================*/
+.recommend {
+    width: 80%;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.recommend img {
+    width: 80%;
+}
 
 
 
+/*===========================responsive function=============================*/
+@media (max-width: 1000px) {
+    .recommend {
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr; /* recommend 없어진 후 한 열로 변경 */
+    }
+    .main_video {
+       width: 720px;
+       height: auto;
+    }
+}
 
 /*=======================영역 확인용===============================*/
-.sidebar_mini {
+.sidebar_mini, .recommend {
     background-color: purple;
 }
+

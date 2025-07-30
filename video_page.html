@@ -146,26 +146,56 @@
             <img src="./icon/tower-broadcast-solid-full.svg" alt="방송 중" class="broadcasting">
         </button>
     </div>
-    <div class="main_contents">
-        <div class="main_video">
-            <img src="./thumbnail/thumbnail_1.png" alt="동영상">
-            <h3 class="main_video_title">메인 영상 제목</h3>
-            <div class="main_video_info">
-                <img src="icon/user-regular-full.svg" alt="채널 프로필">
-                <h4 class="channel_name">채널 이름</h4>
-                <span class="subscriber"></span>
+    <div class="container">
+        <main class="main_contents">
+            <div class="main_video">
+                <img src="./thumbnail/thumbnail_1.png" alt="동영상">
+                <h3 class="main_video_title">메인 영상 제목</h3>
+                <div class="main_video_info_wrap">
+                    <div class="main_video_info">
+                        <img src="icon/user-regular-full.svg" alt="채널 프로필">
+                        <div class="main_video_channel">
+                            <h4 class="channel_name">채널 이름</h4>
+                            <span class="subscriber">구독자 수</span>
+                        </div>
+                    </div>
+                    <button class="join">가입</button>
+                    <button class="subscribe">구독</button>
+                    <div class="func_btn">
+                        <button class="like">좋아요</button>
+                        <button class="dislike">싫어요</button>
+                        <button class="offline_store">오프라인 저장</button>
+                        <button class="thanks">Thanks</button>
+                        <button class="clip">클립</button>
+                        <button class="other_buttons">⋯</button>
+                    </div>
+                </div>
+                <section class="video_detail">
+                    <span>조회수</span>
+                    <span>업로드 시간</span>
+                    <p>그 외의 설명들</p>
+                </section>
             </div>
-            <button class="join">가입</button>
-            <button class="subscribe">구독</button>
+            <div class="comments">
+                <div class="comments_wrap">
+                    <h3>댓글 150개</h3>
+                    <button class="text_align">
+                        <img src="#" alt="정렬기준">
+                        <span>정렬 기준</span>
+                    </button>
+                </div>
 
-            <button class="like">좋아요</button>
-            <button class="dislike">싫어요</button>
-            <button class="offline_store">오프라인 저장</button>
-            <button class="thanks">Thanks</button>
-            <button class="clip">클립</button>
-            <button class="other_buttons">...</button>
+            </div>
 
-        </div>
+        </main>
+        <aside class="recommend">
+            <div class="recommended_video">
+                <img src="./thumbnail/thumbnail_2.png" alt="추천 영상">
+                <h4 class="rec_video_title">추천 영상 제목</h4>
+                <span class="RV_channel_name">추천 영상 채널</span>
+                <span class="RV_other_info">조회수 / 업로드 시간</span>
+            </div>
+        </aside>
     </div>
 </body>
 </html>
