@@ -429,7 +429,6 @@ img.broadcasting{
     display: grid;
     /*grid-template-columns: 1fr 500px;*/
     grid-template-columns: 1fr minmax(250px, 500px);
-
 }
 .main_contents {
     display: flex;
@@ -440,24 +439,31 @@ img.broadcasting{
     box-sizing: border-box;
     align-items: flex-start;
     justify-content: center;
+    gap: 15px;
 }
 .main_video {
     display: flex;
     flex-direction: column;
-    height: auto;
+    /*height: calc(100vw * 9 / 16);*/
+    position: relative;
     width: 100%;
     max-width: 1600px;
-    min-width: 720px;
+    min-width: 0px;
+    padding-top: 56.25%;
+    height: 0;
 }
 .main_video_info_wrap {
     display: flex;
     align-items: center;
     gap: 12px;
-
-}
-.main_video img{
     width: 100%;
-    height: auto;
+}
+.main_video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 /*==========================video info==========================*/
@@ -575,14 +581,31 @@ img.broadcasting{
 }
 
 
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0 20px;
+    }
 
-/*===========================responsive function=============================*/
+    .main_contents {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_video_info_wrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*===========================responsive function=============================
 @media (max-width: 1000px) {
     .recommend {
         display: none;
     }
     .container {
-        grid-template-columns: 1fr; /* recommend 없어진 후 한 열로 변경 */
+        grid-template-columns: 1fr; /* recommend 없어진 후 한 열로 변경
     }
     .main_video {
         width: 100%;
@@ -591,7 +614,7 @@ img.broadcasting{
     .comment_area textarea{
         width: 720px;
     }
-}
+}*/
 
 /*=======================영역 확인용===============================*/
 .sidebar_mini, .recommend {
