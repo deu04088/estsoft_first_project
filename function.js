@@ -44,5 +44,63 @@ user_backdrop.addEventListener('click', function() {
     user_backdrop.classList.remove('open');
 });
 
+// button
+//document.getElementById('minibar_home_btn').addEventLister('click', function() {
+//    location.href = 'main_page.html?videoId=main'
+//})
 
 
+
+
+
+
+// videoId
+//const params = new URLSearchParams(location.search);
+//const videoId = params.get("videoId");
+//
+//if (videoId === "main") {
+//    showMainPage();
+//} else if (videoId === "subscribe") {
+//    showSubscribePage();
+//} else if (videoId === "1") {
+//    showVideoPage();
+//}
+
+
+
+
+
+//const params = new URLSearchParams(window.location.search);
+//params.set('videoId', '1');
+//window.location.search = params.toString();
+
+
+
+
+
+
+
+//var http = require('http');
+//var url = require('url');
+//
+//var app = http.createServer(function (request, response) {
+//    var queryData = url.parse(request.url, true).query;
+//    response.end(queryData.name);
+//});
+//
+//app.listen(4000);
+
+
+
+
+
+//
+//const urlParams = new URL('http://localhost:63342/estsoft_first_project/video_page.html?_ijt=it0hjqj377ld1pnb2h2dhacvov&_ij_reload=RELOAD_ON_SAVE');
+//const urlObject = new URL(urlParams);
+//
+//urlObject.search = '';
+//console.log(urlObject.toString());
+//
+//
+//urlObject.searchParams.set("videoId", "1");
+//console.log(urlObject)

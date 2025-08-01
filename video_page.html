@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./stylesheet.css">
-    <script defer src="function.js"></script>
+    <script>
+        const params = new URLSearchParams(location.search);
+            if(!params.has('videoId')) {
+                const newUrl = location.pathname + '?videoId=1';
+                location.replace(newUrl);
+            }
+    </script>
+    <script defer src="function.js">
+
+    </script>
 
 </head>
 <body>
@@ -15,7 +24,7 @@
         </a>
         </div>
         <div class="logo">
-            <a href="http://localhost:63342/estsoft_first_project/main_page.html?_ijt=1iq8tmqn7uuledo95remv76kgi&_ij_reload=RELOAD_ON_SAVE" target="_self">
+            <a href="main_page.html?videoId=main" target="_self">
                 <img src="youtube_logo_1.PNG" alt="유튜브">
             </a>
         </div>
@@ -88,7 +97,7 @@
     </div>
     <div class="side_backdrop"></div>
     <div class="sidebar">
-        <button type="button">
+        <button type="button" onclick="location.href='./main_page.html?videoId=main'">
             <img src="./icon/house-solid-full.svg" alt="홈">
             <span>홈</span>
         </button>
@@ -96,7 +105,7 @@
             <img src="./icon/icons8-youtube-반바지-48.png" alt="쇼츠">
             <span>Shorts</span>
         </button>
-        <button type="button">
+        <button type="button" onclick="location.href='./main_page.html?videoId=subscribe'">
             <img src="./icon/youtube-brands-solid-full.svg" alt="구독">
             <span>구독</span>
         </button>
@@ -180,9 +189,13 @@
                 <div class="comments_wrap">
                     <h3>댓글 150개</h3>
                     <button class="text_align">
-                        <img src="#" alt="정렬기준">
+                        <img src="./icon/filter-left.svg" alt="정렬기준">
                         <span>정렬 기준</span>
                     </button>
+                </div>
+                <div class="comment_area">
+                    <img src="./icon/user-regular-full.svg" alt="프로필 사진">
+                    <textarea id="insert_comment" rows="1" placeholder="댓글"></textarea>
                 </div>
 
             </div>

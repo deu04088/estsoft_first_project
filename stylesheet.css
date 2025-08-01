@@ -382,6 +382,11 @@ img.broadcasting{
     flex-direction: column;
     cursor: pointer;
 }
+.video_thumbnail a{
+    color: black;
+    text-decoration: none;
+}
+
 .thumbnail_image {
     width: 100%;
     border-radius: 12px;
@@ -389,7 +394,7 @@ img.broadcasting{
 }
 .video_info {
     display: flex;
-    margin-top: 10px;
+
 }
 .channel_icon {
     width: 40px;
@@ -430,10 +435,11 @@ img.broadcasting{
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
     align-items: flex-start;
     justify-content: center;
-    /*margin-top: 80px;*/
 }
 .main_video {
     display: flex;
@@ -454,6 +460,7 @@ img.broadcasting{
     height: auto;
     border-radius: 10px;
 }
+/*==========================video info==========================*/
 .main_video_title {
     margin: 10px;
 }
@@ -472,8 +479,12 @@ img.broadcasting{
 .main_video_channel {
     display: flex;
     flex-direction: column;
-    padding-right: 30px;
+    margin-right: 30px;
 }
+.channel_name {
+    white-space: nowrap;
+}
+/*==========================detail info==========================*/
 .main_video_channel span {
     font-size: 12px;
 }
@@ -507,7 +518,50 @@ img.broadcasting{
 }
 .comments_wrap {
     display: flex;
+    align-items: center;
     gap: 30px;
+}
+.text_align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: auto;
+    padding: 0 10px;
+    border: none;
+    background-color: rgba(0,0,0,0);
+    gap: 8px;
+}
+.text_align img {
+    height: 30px;
+    width: auto;
+}
+.text_align span {
+    font-size: 14px;
+    font-weight: 500;
+}
+.comment_area{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+}
+.comment_area img {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    background-color: #dddddd;
+}
+.comment_area textarea {
+    width: auto;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    resize: none;
+    min-width: 0;
 }
 
 /*===========================recommended video=================================*/
@@ -531,8 +585,11 @@ img.broadcasting{
         grid-template-columns: 1fr; /* recommend 없어진 후 한 열로 변경 */
     }
     .main_video {
-       width: 720px;
-       height: auto;
+        width: 100%;
+        height: auto;
+    }
+    .comment_area textarea{
+        width: 720px;
     }
 }
 
