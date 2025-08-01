@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./stylesheet.css">
+    <script>
+        const params = new URLSearchParams(location.search);
+            if(!params.has('videoId')) {
+                const newUrl = location.pathname + '?videoId=subscribe';
+                location.replace(newUrl);
+            }
+    </script>
+    <script defer src="function.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="sidebar_icon">
+            <a href="#" id="sidebar_toggle">
+                <img src=./icon/bars-solid-full.svg alt="사이드바">
+            </a>
+        </div>
+        <div class="logo">
+            <a href="main_page.html?videoId=main" target="_self">
+                <img src="youtube_logo_1.PNG" alt="유튜브">
+            </a>
+        </div>
+        <div class="search_bar">
+            <form class="search" id="search" action="" method="get">
+                <input type="search" name="" value="" placeholder="검색">
+                <button type="submit">
+                    <img src="./icon/magnifying-glass-solid-full.svg" alt="검색">
+                </button>
+            </form>
+            <button type="button" class="search_by_sound">
+                <img src="./icon/microphone-solid-full.svg" alt="음성 검색">
+            </button>
+        </div>
+        <div class="func_btn">
+            <button type="button" class="upload_video">
+                <img src="./icon/plus.png" alt="영상 업로드">
+                <span>만들기</span>
+            </button>
+            <button type="button" class="alert_btn">
+                <img src="./icon/bell-regular-full.svg" alt="알림">
+            </button>
+            <button type="button" class="user_info" id="user_info">
+                <img src="./icon/user-regular-full.svg" alt="사용자 정보">
+            </button>
+        </div>
+    </nav>
+    <div class="user_backdrop"></div>
+    <div class="user_option" id="user_option">
+        <div class="information">
+            <img src="userpage.png" alt="프로필사진">
+            <div class="info_text">
+                <span class="user_name">박주영</span>
+                <span class="user_id">@JYP</span>
+                <a href="#" class="link_to_channel">내 채널 보기</a>
+            </div>
+
+        </div>
+        <hr>
+        <div class="option_list">
+            <ul>
+                <li>Google 계정</li>
+                <li>계정 전환</li>
+                <li>로그아웃</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>YouTube 스트디오</li>
+                <li>구매 항목 및 멤버십</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>YouTube의 내 데이터</li>
+                <li>디자인: 기기테마</li>
+                <li>언어: 한국어</li>
+                <li>제한모드: 사용 안함</li>
+                <li>위치: 한국</li>
+                <li>단축키</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>설정</li>
+            </ul>
+            <hr>
+            <ul>
+                <li>고객센터</li>
+                <li>의견 보내기</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sidebar_mini">
+        <button type="button" onclick="location.href='./main_page.html?videoId=main'">
+            <img src="./icon/house-solid-full.svg" alt="홈">
+            <p>홈</p>
+        </button>
+        <button type="button">
+            <img src="./icon/icons8-youtube-반바지-48.png" alt="쇼츠">
+            <p>Shorts</p>
+        </button>
+        <button type="button" onclick="location.href='./main_page.html?videoId=subscribe'">
+            <img src="./icon/youtube-brands-solid-full.svg" alt="구독">
+            <p>구독</p>
+        </button>
+        <button type="button">
+            <img src="./icon/user-regular-full.svg" alt="내 페이지">
+            <p>내 페이지</p>
+        </button>
+    </div>
+    <div class="side_backdrop"></div>
+    <div class="sidebar">
+        <button type="button" onclick="location.href='./main_page.html?videoId=main'">
+            <img src="./icon/house-solid-full.svg" alt="홈">
+            <span>홈</span>
+        </button>
+        <button type="button">
+            <img src="./icon/icons8-youtube-반바지-48.png" alt="쇼츠">
+            <span>Shorts</span>
+        </button>
+        <button type="button" onclick="location.href='./main_page.html?videoId=subscribe'">
+            <img src="./icon/youtube-brands-solid-full.svg" alt="구독">
+            <span>구독</span>
+        </button>
+        <hr>
+        <button type="button" class="category">
+            <span>내 페이지 〉</span>
+        </button>
+        <button type="button">
+            <img src="./icon/clock-regular-full.svg" alt="시청 기록">
+            <span>시청 기록</span>
+        </button>
+        <button type="button">
+            <img src="./icon/list-solid-full.svg" alt="재생 목록">
+            <span>재생 목록</span>
+        </button>
+        <button type="button">
+            <img src="./icon/youtube-brands-solid-full.svg" alt="내 동영상">
+            <span>내 동영상</span>
+        </button>
+        <button type="button">
+            <img src="./icon/clock-regular-full.svg" alt="나중에 볼 동영상 " >
+            <span>나중에 볼 동영상</span>
+        </button>
+        <button type="button">
+            <img src="./icon/thumbs-up-regular-full.svg" alt="좋아요">
+            <span>좋아요 표시한 동영상</span>
+        </button>
+        <button type="button">
+            <img src="./icon/download-solid-full.svg" alt="다운로드">
+            <span>오프라인 저장 동영상</span>
+        </button>
+        <hr>
+        <p>구독</p>
+        <button type="button">
+            <img src="./icon/user-regular-full.svg" alt="구독1">
+            <span>구독 채널</span>
+            <img src="./icon/tower-broadcast-solid-full.svg" alt="방송 중" class="broadcasting">
+        </button>
+        <button type="button">
+            <img src="./icon/user-regular-full.svg" alt="구독1">
+            <span>구독 채널</span>
+            <img src="./icon/tower-broadcast-solid-full.svg" alt="방송 중" class="broadcasting">
+        </button>
+        <button type="button">
+            <img src="./icon/user-regular-full.svg" alt="구독1">
+            <span>구독 채널</span>
+            <img src="./icon/tower-broadcast-solid-full.svg" alt="방송 중" class="broadcasting">
+        </button>
+    </div>
+    <div class="video_list">
+
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_1.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_2.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_3.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_4.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_5.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_6.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_7.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="video_thumbnail">
+            <a href="video_page.html?videoId=1">
+                <img src="./thumbnail/thumbnail_8.png" class="thumbnail_image" alt="썸네일">
+                <div class="video_info">
+                    <img src="./icon/user-regular-full.svg" class="channel_icon" alt="채널 아이콘">
+                    <div class="video_text">
+                        <h3 class="video_title">영상 제목</h3>
+                        <p class="channel_name">채널 이름</p>
+                        <p class="other_info">조회수 / 업로드 시간</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
