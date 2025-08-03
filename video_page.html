@@ -171,8 +171,15 @@
                     <button class="join">가입</button>
                     <button class="subscribe">구독</button>
                     <div class="func_btn">
-                        <button class="like">좋아요</button>
-                        <button class="dislike">싫어요</button>
+                        <div class="func_like">
+                            <button class="like">
+                                <img src="icon/hand-thumbs-up.svg">
+                                <span>좋아요</span>
+                            </button>
+                            <button class="dislike">
+                                <img src="icon/hand-thumbs-down.svg">
+                            </button>
+                        </div>
                         <button class="offline_store">오프라인 저장</button>
                         <button class="thanks">Thanks</button>
                         <button class="clip">클립</button>
@@ -196,18 +203,52 @@
                 <div class="comment_area">
                     <img src="./icon/user-regular-full.svg" alt="프로필 사진">
                     <textarea id="insert_comment" rows="1" placeholder="댓글"></textarea>
+                    <button id="submit_comment">등록</button>
                 </div>
-
+                <div class="record_comment" id="record_comment"></div>
             </div>
-
         </main>
         <aside class="recommend">
             <div class="recommended_video">
+                <img src="./thumbnail/thumbnail_1.png" alt="추천 영상">
+                <div class="rec_video_list">
+                    <h4 class="rec_video_title">추천 영상 제목</h4>
+                    <span class="RV_channel_name">추천 영상 채널</span>
+                    <span class="RV_other_info">조회수 / 업로드 시간</span>
+                </div>
+            </div>
+            <div class="recommended_video">
                 <img src="./thumbnail/thumbnail_2.png" alt="추천 영상">
+                <div class="rec_video_list">
+                    <h4 class="rec_video_title">추천 영상 제목</h4>
+                    <span class="RV_channel_name">추천 영상 채널</span>
+                    <span class="RV_other_info">조회수 / 업로드 시간</span>
+                </div>
+            </div>
+            <div class="recommended_video">
+                <img src="./thumbnail/thumbnail_3.png" alt="추천 영상">
+                <div class="rec_video_list">
+                    <h4 class="rec_video_title">추천 영상 제목</h4>
+                    <span class="RV_channel_name">추천 영상 채널</span>
+                    <span class="RV_other_info">조회수 / 업로드 시간</span>
+                </div>
+            </div>
+            <div class="recommended_video">
+                <img src="./thumbnail/thumbnail_4.png" alt="추천 영상">
+                <div class="rec_video_list">
+                    <h4 class="rec_video_title">추천 영상 제목</h4>
+                    <span class="RV_channel_name">추천 영상 채널</span>
+                    <span class="RV_other_info">조회수 / 업로드 시간</span>
+                </div>
+            </div><div class="recommended_video">
+            <img src="./thumbnail/thumbnail_5.png" alt="추천 영상">
+            <div class="rec_video_list">
                 <h4 class="rec_video_title">추천 영상 제목</h4>
                 <span class="RV_channel_name">추천 영상 채널</span>
                 <span class="RV_other_info">조회수 / 업로드 시간</span>
             </div>
+        </div>
+
         </aside>
     </div>
 </body>

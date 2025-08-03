@@ -44,15 +44,55 @@ user_backdrop.addEventListener('click', function() {
     user_backdrop.classList.remove('open');
 });
 
-// button
-//document.getElementById('minibar_home_btn').addEventLister('click', function() {
-//    location.href = 'main_page.html?videoId=main'
-//})
 
+const textarea = document.getElementById("insert_comment");
+const submitBtn = document.getElementById("submit_comment");
+const recordComment = document.getElementById("record_comment");
 
+submitBtn.addEventListener('click', function () {
+    const comment = textarea.value.trim();
 
+    if (comment) {
+        const commentItem = document.createElement('div');
+        commentItem.className = 'comment_item';
+        commentItem.innerHTML = `
+            <div class="comment_profile">
+                <img src="./icon/user-regular-full.svg" alt="프로필 사진">
+            </div>
+            <div class="comment_text">
+                <p>${comment}</p>
+            </div>
+        `;
 
+        recordComment.prepend(commentItem);
+        textarea.value = '';
+    }
+});
 
+document.addEventListener('DOMContentLoaded', function () {
+    textarea.addEventListener('keydown', function() {
+        if(event.key === 'Enter' && !event.shiftKey) {
+            event.preventDefault();
+            const comment = textarea.value.trim();
+
+            if (comment) {
+                const commentItem = document.createElement('div');
+                commentItem.className = 'comment_item';
+                commentItem.innerHTML = `
+                    <div class="comment_profile">
+                        <img src="./icon/user-regular-full.svg" alt="프로필 사진">
+                    </div>
+                    <div class="comment_text">
+                        <p>${comment}</p>
+                    </div>
+                `;
+
+                recordComment.prepend(commentItem);
+                textarea.value = '';
+            }
+        }
+    });
+});
 
 // videoId
 //const params = new URLSearchParams(location.search);
@@ -65,42 +105,7 @@ user_backdrop.addEventListener('click', function() {
 //} else if (videoId === "1") {
 //    showVideoPage();
 //}
-
-
-
-
-
-//const params = new URLSearchParams(window.location.search);
-//params.set('videoId', '1');
-//window.location.search = params.toString();
-
-
-
-
-
-
-
-//var http = require('http');
-//var url = require('url');
 //
-//var app = http.createServer(function (request, response) {
-//    var queryData = url.parse(request.url, true).query;
-//    response.end(queryData.name);
-//});
-//
-//app.listen(4000);
 
 
 
-
-
-//
-//const urlParams = new URL('http://localhost:63342/estsoft_first_project/video_page.html?_ijt=it0hjqj377ld1pnb2h2dhacvov&_ij_reload=RELOAD_ON_SAVE');
-//const urlObject = new URL(urlParams);
-//
-//urlObject.search = '';
-//console.log(urlObject.toString());
-//
-//
-//urlObject.searchParams.set("videoId", "1");
-//console.log(urlObject)
