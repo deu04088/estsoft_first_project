@@ -1,7 +1,7 @@
 /*===============================navbar========================================*/
 .navbar {
     position: relative;
-    top: 0;
+    top: 10px;
     left: 0;
     margin: 0px;
     padding: 0px 20px;
@@ -93,7 +93,6 @@
     justify-content: flex-end;
     gap: 10px;
     padding: 0 10px;
-    margin-right: 20px;
 }
 .func_btn button {
     flex-shrink: 0;
@@ -104,28 +103,6 @@
     align-items: center;
     justify-content: center;
 }
-.func_like {
-    display: flex;
-    border: 1px solid lightgray;
-    border-radius: 20px;
-    background-color: lightgray;
-    overflow: hidden;
-}
-
-.like {
-    align-items: center;
-    justify-contents: center;
-    border-radius: 0;
-}
-.dislike {
-    align-items: center;
-    justify-contents: center;
-    border-radius: 0;
-}
-.like + .dislike {
-    border-left: 1px solid #ccc;
-}
-
 .upload_video {
     display: flex;
     height: 32px;
@@ -198,7 +175,7 @@
     align-items: center;
     position: fixed;
     padding-top: 10px;
-    top: 50px;
+    top: 90px;
     left: 0px;
     height: 100%;
     width: 80px;
@@ -244,7 +221,7 @@
 .sidebar {
     position: fixed;
     padding-top: 10px;
-    top: 50px;
+    top: 90px;
     left: -250px;
     height: 100%;
     width: 250px;
@@ -323,8 +300,8 @@ img.broadcasting{
 
 .user_option {
     position: absolute;
-    top: 44px;
-    right: 10px;
+    top: 60px;
+    right: 5px;
     width: 280px;
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -387,7 +364,7 @@ img.broadcasting{
 /*===========================비디오 썸네일===================================*/
 .video_list {
     position: relative;
-    top: 50px;
+    top: 30px;
     margin-left: 80px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -446,8 +423,8 @@ img.broadcasting{
 /*============================video page====================================*/
 .container {
     position: relative;
-    margin: 0 40px;
-    top: 50px;
+    margin: 0 20px 0 40px;
+    top: 30px;
     display: grid;
     /*grid-template-columns: 1fr 500px;*/
     grid-template-columns: 1fr minmax(250px, 500px);
@@ -539,6 +516,25 @@ img.broadcasting{
     height: 32px;
     width: auto;
     padding: 0 10px;
+    background-color: #f5f5f5;
+}
+.func_like {
+    display: flex;
+    border: 1px solid #f5f5f5;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+.like .dislike{
+    align-items: center;
+    justify-contents: center;
+    border-radius: 0;
+}
+.like + .dislike {
+    border-left: 1px solid #ccc;
+}
+.like-btn.clicked img, .dislike-btn.clicked img {
+    filter: brightness(2) saturate(2);
 }
 .video_detail {
     margin-top: 15px;
@@ -638,7 +634,7 @@ img.broadcasting{
     display: flex;
     width: 90%;
     padding: 10px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     gap: 20px;
@@ -681,23 +677,6 @@ img.broadcasting{
         align-items: flex-start;
     }
 }
-
-/*===========================responsive function=============================
-@media (max-width: 1000px) {
-    .recommend {
-        display: none;
-    }
-    .container {
-        grid-template-columns: 1fr; /* recommend 없어진 후 한 열로 변경
-    }
-    .main_video {
-        width: 100%;
-        height: auto;
-    }
-    .comment_area textarea{
-        width: 720px;
-    }
-}*/
 
 
 
