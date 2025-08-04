@@ -32,15 +32,15 @@
 | 반응형 메뉴 | 메뉴 토글 및 아이콘 반응 구현 |
 
 ## 폴더 구조 예시
-/youtube-clone
-├── main_page.html
-├── subscribe_page.html
-├── video_page.html
-├── css/
-│ └── style.css
-├── js/
-│ └── function.js
-└── icon/
+/youtube-clone  
+├── main_page.html  
+├── subscribe_page.html  
+├── video_page.html  
+├── css/  
+│ └── style.css  
+├── js/  
+│ └── function.js  
+└── icon/  
 └── thumbnails/
 
 ## 문제 상황 및 해결 방법
