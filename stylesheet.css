@@ -1,19 +1,15 @@
 /*===============================navbar========================================*/
 .navbar {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     margin: 0px;
     padding: 0px 20px;
     height: 50px;
     width: 100%;
-    background-color: yellow;
     display: flex;
     align-items: center;
     z-index: 1000;
-}
-.logo {
-    background-color: green;
 }
 .logo img {
     height: 30px;
@@ -703,8 +699,6 @@ img.broadcasting{
     }
 }*/
 
-/*=======================영역 확인용===============================*/
-.sidebar_mini, .recommend {
-    background-color: purple;
-}
+
+
 
