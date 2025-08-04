@@ -9,11 +9,8 @@
   - YouTube의 기본적인 기능과 UI를 모방하여 구조적 사고력 훈련
   - 추후 백엔드 연동을 위한 웹 컴포넌트 설계 이해
   - 모바일 대응 반응형 레이아웃 적용 실습
-- 배포 주소
-  - ㅇㅇ
-- 시연 영상
-  - ㅇㅇ
 - 프로젝트 타임라인
+<img width="1035" height="561" alt="image" src="https://github.com/user-attachments/assets/06a42d9e-7c1e-499e-8794-6ee0e2458364" />
 
 - UI 구성도
   <img width="1927" height="1031" alt="image" src="https://github.com/user-attachments/assets/d441b8c3-050e-4285-9505-c4ff4d922776" />
